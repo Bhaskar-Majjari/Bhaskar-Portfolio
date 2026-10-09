@@ -1,0 +1,388 @@
+.projects-section {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  padding: 80px 0 90px;
+  background: #050609;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.projects-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.projects-heading-icon {
+  color: #00ff9c;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.projects-heading h1 {
+  margin: 0;
+  color: #e8e8eb;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.projects-heading h1 span {
+  color: #00ff9c;
+}
+
+
+.projects-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  background: #080a0f;
+  border: 1px solid #28323c;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+/* Background grid */
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 35px 35px;
+}
+
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55px;
+  height: 2px;
+  background: var(--project-color);
+  transition: width 0.25s ease;
+}
+
+/* Project Colors */
+
+.project-card.cyan {
+  --project-color: #00e5ff;
+}
+
+.project-card.purple {
+  --project-color: #b56cff;
+}
+
+.project-card.blue {
+  --project-color: #4d9fff;
+}
+
+.project-card.orange {
+  --project-color: #ff9d4d;
+}
+
+
+.project-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.project-number {
+  color: var(--project-color);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.project-type {
+  color: #697684;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-right: auto;
+}
+
+
+.project-details {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  color: var(--project-color);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition:
+    gap 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.project-details span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.project-details:hover {
+  gap: 10px;
+}
+
+
+.project-title-area {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 22px;
+}
+
+.project-category {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--project-color);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.project-title-area h2 {
+  margin: 0;
+  color: #e7eaed;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+}
+
+
+.project-description {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  color: #9ba5ae;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.project-arrow {
+  flex-shrink: 0;
+  color: var(--project-color);
+  font-weight: 700;
+}
+
+
+.project-bottom {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid #202831;
+}
+
+.tech-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #53616e;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tech {
+  padding: 7px 10px;
+  color: #9da8b3;
+  background: #0b0e13;
+  border: 1px solid #27313a;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.project-tech:hover {
+  color: var(--project-color);
+  border-color: var(--project-color);
+  background: #0d1116;
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--project-color);
+  background: #090d10;
+  box-shadow:
+    0 12px 35px color-mix(
+      in srgb,
+      var(--project-color) 8%,
+      transparent
+    );
+}
+
+.project-card:hover::after {
+  width: 100px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .projects-section {
+    min-height: auto;
+    padding: 70px 0 80px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 390px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .projects-section {
+    padding: 55px 0 70px;
+  }
+
+  .projects-container {
+    padding: 0 18px;
+  }
+
+  .projects-heading {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .projects-heading h1 {
+    font-size: 36px;
+  }
+
+  .projects-heading-icon {
+    font-size: 20px;
+  }
+
+  .projects-grid {
+    gap: 16px;
+  }
+
+  .project-card {
+    min-height: auto;
+    padding: 21px;
+  }
+
+  .project-top {
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .project-number {
+    font-size: 16px;
+  }
+
+  .project-type {
+    font-size: 9px;
+  }
+
+  .project-details {
+    font-size: 9px;
+  }
+
+  .project-title-area h2 {
+    font-size: 23px;
+  }
+
+  .project-description {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .project-bottom {
+    margin-top: 28px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .projects-heading h1 {
+    font-size: 32px;
+  }
+
+  .project-card {
+    padding: 18px;
+  }
+
+  .project-title-area h2 {
+    font-size: 21px;
+  }
+
+  .project-type {
+    display: none;
+  }
+
+  .project-description {
+    font-size: 11px;
+  }
+}

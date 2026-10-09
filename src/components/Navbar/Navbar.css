@@ -1,0 +1,194 @@
+.navbar {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+   background: #050609;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-logo {
+  flex-shrink: 0;
+  color: #00ff9c;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-shadow:
+    0 0 8px rgba(0, 255, 156, 0.35);
+  transition: 0.25s ease;
+}
+
+.navbar-logo:hover {
+  text-shadow:
+    0 0 15px rgba(0, 255, 156, 0.7);
+}
+
+.navbar-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.navbar-links a {
+  color: #737986;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
+}
+
+.navbar-links a:hover {
+  color: #00ff9c;
+  text-shadow:
+    0 0 8px rgba(0, 255, 156, 0.5);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-left: 25px;
+}
+
+.resume-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #737986;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.25s ease;
+}
+
+.resume-link:hover {
+  color: #00d9ff;
+}
+
+.resume-icon {
+  font-size: 13px;
+}
+
+
+.hire-button {
+  min-width: 124px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ff9c;
+  border: 1px solid #00ff9c;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+.hire-button::before,
+.hire-button::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+}
+
+.hire-button::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #00ff9c;
+  border-left: 2px solid #00ff9c;
+}
+
+.hire-button::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 2px solid #00ff9c;
+  border-bottom: 2px solid #00ff9c;
+}
+
+.hire-button:hover {
+  background: rgba(0, 255, 156, 0.08);
+  box-shadow:
+    0 0 18px rgba(0, 255, 156, 0.15);
+}
+
+
+@media (max-width: 1150px) {
+  .navbar-container {
+    padding: 0 28px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .navbar-actions {
+    gap: 16px;
+    margin-left: 10px;
+  }
+
+  .resume-link {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .navbar {
+    height: 75px;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  .navbar-links,
+  .resume-link {
+    display: none;
+  }
+
+  .navbar-actions {
+    margin-left: auto;
+  }
+
+  .navbar-logo {
+    font-size: 19px;
+  }
+
+  .hire-button {
+    min-width: 105px;
+    height: 38px;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+}
